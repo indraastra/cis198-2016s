@@ -1,0 +1,13 @@
+[package]
+name = "hw01"
+version = "0.1.0"
+authors = ["Vishal Talwar <vishal@grainlighting.com>"]
+
+[dependencies]
+uuid = "0.1"
+rand = "0.3"
+
+[profile.release]
+opt-level = 3
+debug = false
+
