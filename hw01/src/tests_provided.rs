@@ -76,39 +76,3 @@ fn test_hanoi_1_disks() {
     assert_eq!(1, result.len());
 }
 
-#[test]
-fn test_hanoi_3_disks() {
-    let result = hanoi(3, Peg::A, Peg::B, Peg::C);
-    assert_eq!(vec![
-        (Peg::A, Peg::C),
-        (Peg::A, Peg::B),
-        (Peg::C, Peg::B),
-        (Peg::A, Peg::C),
-        (Peg::B, Peg::A),
-        (Peg::B, Peg::C),
-        (Peg::A, Peg::C)
-    ], result);
-    assert_eq!(7, result.len());
-}
-
-#[test]
-fn test_hanoi_4_disks() {
-    let result = hanoi(4, Peg::A, Peg::B, Peg::C);
-    assert_eq!(vec![
-        (Peg::A, Peg::B),
-        (Peg::A, Peg::C),
-        (Peg::B, Peg::C),
-        (Peg::A, Peg::B),
-        (Peg::C, Peg::A),
-        (Peg::C, Peg::B),
-        (Peg::A, Peg::B),
-        (Peg::A, Peg::C),
-        (Peg::B, Peg::C),
-        (Peg::B, Peg::A),
-        (Peg::C, Peg::A),
-        (Peg::B, Peg::C),
-        (Peg::A, Peg::B),
-        (Peg::A, Peg::C),
-        (Peg::B, Peg::C)
-    ], result);
-}
